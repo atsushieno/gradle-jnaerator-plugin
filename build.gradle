@@ -23,13 +23,11 @@ gradlePlugin {
 	// Define the plugin
 	plugins {
 		jnaeratorPlugin {
-			id = 'dev.atsushieno.jnaerator'
+			id = 'dev.atsushieno.jnaerator-gradle-plugin'
 			implementationClass = 'org.anarres.gradle.plugin.jnaerator.JNAeratorPlugin'
 			displayName = 'atsushieno fork of Anarres JNAERATOR Plugin'
 			description = 'A Gradle plugin for the JNAerator binding generator. - fork by atsushieno for package publication certainty.'
 		}
-
-
 	}
 }
 
@@ -64,7 +62,7 @@ publishing {
 		pluginPublication(MavenPublication) {
 
 			groupId group
-			artifactId "gradle-jnaerator-plugin"
+			artifactId "jnaerator-gradle-plugin"
 			version version
 			from components.java
 
