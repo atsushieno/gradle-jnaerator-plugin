@@ -64,7 +64,7 @@ publishing {
 		pluginPublication(MavenPublication) {
 
 			groupId group
-			artifactId "jnaerator-gradle-plugin"
+			artifactId "gradle-jnaerator-plugin"
 			version version
 			from components.java
 
