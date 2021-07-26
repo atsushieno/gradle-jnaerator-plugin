@@ -1,21 +1,5 @@
 
-tasks.register('javadocJar', Jar) {
-    archiveClassifier.set('javadoc')
-    from javadoc.destinationDir
-}
-tasks.register('sourceJar', Jar) {
-    archiveClassifier.set('sources')
-    from sourceSets.main.allSource
-}
-
 publishing {
-    publications {
-        maven(MavenPublication) {
-            artifact(javadocJar)
-            artifact(sourceJar)
-        }
-    }
-
     repositories {
         maven {
             name = "OSSRH"
@@ -26,5 +10,8 @@ publishing {
             }
         }
     }
+
+    // keep it as is. It is replaced by CI release builds
+    signing {}
 }
 
