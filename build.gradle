@@ -11,7 +11,7 @@ plugins {
 
 
 group = "dev.atsushieno"
-version = gradle.ext.has("version") ? gradle.ext.version : "dev"
+version = "1.0.100"
 
 java {
 	toolchain {
