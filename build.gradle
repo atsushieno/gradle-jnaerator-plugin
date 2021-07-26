@@ -66,6 +66,10 @@ publishing {
 			pom {
 				name = 'atsushieno fork of Anarres JNAERATOR Plugin'
 				description = 'A Gradle plugin for the JNAerator binding generator. - fork by atsushieno for package publication certainty.'
+				url.set('https://github.com/atsushieno/gradle-jnaerator-plugin')
+				scm {
+					url.set('https://github.com/atsushieno/gradle-jnaerator-plugin')
+				}
 
 				//properties = [ ]
 				licenses {
