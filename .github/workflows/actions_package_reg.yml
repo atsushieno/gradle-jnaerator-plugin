@@ -1,4 +1,4 @@
-name: build dist
+name: publish
 
 on:
   create:
