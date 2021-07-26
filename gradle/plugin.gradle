@@ -1,3 +1,4 @@
+/*
 plugindev {
 	pluginImplementationClass 'org.anarres.gradle.plugin.jnaerator.JNAeratorPlugin'
 	pluginDescription "A gradle plugin for the JNAerator binding generator."
@@ -18,3 +19,4 @@ bintray {
 	key = rootProject.hasProperty('bintrayApiKey')?rootProject.bintrayApiKey:''
 	pkg.repo = 'gradle-plugins'
 }
+*/
