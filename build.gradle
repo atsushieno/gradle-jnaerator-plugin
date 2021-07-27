@@ -5,8 +5,7 @@ plugins {
 
 	// Publish
 	id 'maven-publish'
-	id 'com.gradle.plugin-publish' version '0.13.0'
-	id 'signing'
+	id 'com.gradle.plugin-publish' version '0.14.0'
 }
 
 
@@ -19,11 +18,17 @@ java {
 	}
 }
 
+pluginBundle {
+	website = 'https://github.com/atsushieno/gradle-jnaerator-plugin'
+	vcsUrl = 'https://github.com/atsushieno/gradle-jnaerator-plugin'
+	tags = ['jnaerator']
+}
+
 gradlePlugin {
 	// Define the plugin
 	plugins {
 		jnaeratorPlugin {
-			id = 'dev.atsushieno.jnaerator-gradle-plugin'
+			id = 'dev.atsushieno.jnaerator'
 			implementationClass = 'org.anarres.gradle.plugin.jnaerator.JNAeratorPlugin'
 			displayName = 'atsushieno fork of Anarres JNAERATOR Plugin'
 			description = 'A Gradle plugin for the JNAerator binding generator. - fork by atsushieno for package publication certainty.'
@@ -43,22 +48,8 @@ dependencies {
 
 }
 
-tasks.register('javadocJar', Jar) {
-	archiveClassifier.set('javadoc')
-	from javadoc.destinationDir
-}
-tasks.register('sourceJar', Jar) {
-	archiveClassifier.set('sources')
-	from sourceSets.main.allSource
-}
-
 publishing {
 	publications {
-		maven(MavenPublication) {
-			artifact(javadocJar)
-			artifact(sourceJar)
-		}
-
 		pluginPublication(MavenPublication) {
 
 			groupId group
@@ -107,6 +98,3 @@ repositories {
 	mavenLocal()
 	mavenCentral()
 }
-
-apply from: "${rootDir}/publish-root.gradle"
-apply from: "${rootDir}/publish-module.gradle"
