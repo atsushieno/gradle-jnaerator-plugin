@@ -21,6 +21,6 @@ jobs:
       with:
         java-version: 11
     - name: generate gradle.properties
-      mkdir -p ~/.gradle && echo ${{ secrets.HOME_GRADLE_PROPERTIES_CONTENT }} > ~/.gradle/gradle.properties
+      run: mkdir -p ~/.gradle && echo ${{ secrets.HOME_GRADLE_PROPERTIES_CONTENT }} > ~/.gradle/gradle.properties
     - name: publish
       run: ./gradlew --warning-mode all publishPlugins
