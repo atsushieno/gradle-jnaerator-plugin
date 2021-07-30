@@ -21,7 +21,7 @@ java {
 pluginBundle {
 	website = 'https://github.com/atsushieno/gradle-jnaerator-plugin'
 	vcsUrl = 'https://github.com/atsushieno/gradle-jnaerator-plugin'
-	tags = ['jnaerator']
+	tags = ['jni', 'jna', 'jnaerator']
 }
 
 gradlePlugin {
