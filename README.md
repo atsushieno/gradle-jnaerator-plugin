@@ -1,6 +1,6 @@
 # What is this fork?
 
-It is a renamed fork which now fails to resolve packages from its own expired domain. (This description is provided for Gradle.org developers who don't really test the derived works and convicts that my plugin fork is meaningless.)
+It is a renamed fork from a Gradle plugin (which is actually another fork of a deprecated plugin) which now fails to resolve packages from its own expired domain. (**This description is provided for Gradle.org developers who don't really test the derived works and convicts that my plugin fork is meaningless.**)
 
 Packages are renamed as it is being published to (obviously) plugins.gradle.org to avoid name conflicts.
 
